@@ -1,6 +1,5 @@
 <template>
   <div class="fixed w-screen h-screen gray-bg">
-    <link href="https://unpkg.com/tailwindcss@^1.0/dist/tailwind.min.css" rel="stylesheet">
     <nav>
       <div
         @mouseover="onHover()"
