@@ -37,7 +37,8 @@
 }
 
 .scale {
-  left: -200px;
+  left: -50%;
+  animation: fullOpen 1.3s cubic-bezier(0.270, 1.335, 0.520, 0.975);
 }
 
 .gray-bg {
@@ -50,6 +51,22 @@
   width: 100%;
   z-index: -30;
 }
+
+@keyframes fullOpen {
+    0% {
+      transform: skewX(30deg);
+      left: calc(100% + 50vh * .57735 - 96px);
+    }
+    30% {
+      transform: skewX(-25deg);
+      left: 40%;
+    }
+    100% {
+      transform: skewX(-10deg);
+      left: -30%;
+    }
+}
+
 </style>
 
 <script>
@@ -65,8 +82,10 @@ export default {
       this.hover = true
     },
     offHover() {
-      this.hover = false
-      this.fullMenu = false
+      if (!this.fullMenu) {
+        this.hover = false
+        this.fullMenu = false
+      }
     },
     toggleFull() {
       this.fullMenu = !this.fullMenu
