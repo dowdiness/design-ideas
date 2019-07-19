@@ -2,8 +2,12 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
+const _4c4b9256 = () => interopDefault(import('../pages/FloatingBubbles.vue' /* webpackChunkName: "pages/FloatingBubbles" */))
+const _4a73ac4f = () => interopDefault(import('../pages/processing.vue' /* webpackChunkName: "pages/processing" */))
+const _83aa3152 = () => interopDefault(import('../pages/SearchBox.vue' /* webpackChunkName: "pages/SearchBox" */))
 const _644e8da2 = () => interopDefault(import('../pages/ShuffleBurger.vue' /* webpackChunkName: "pages/ShuffleBurger" */))
 const _3bf3eb9a = () => interopDefault(import('../pages/ShuffleText.vue' /* webpackChunkName: "pages/ShuffleText" */))
+const _56dc42e3 = () => interopDefault(import('../pages/TeaMenu.vue' /* webpackChunkName: "pages/TeaMenu" */))
 const _3fdee074 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
 Vue.use(Router)
@@ -81,6 +85,18 @@ export function createRouter() {
     scrollBehavior,
 
     routes: [{
+      path: "/FloatingBubbles",
+      component: _4c4b9256,
+      name: "FloatingBubbles"
+    }, {
+      path: "/processing",
+      component: _4a73ac4f,
+      name: "processing"
+    }, {
+      path: "/SearchBox",
+      component: _83aa3152,
+      name: "SearchBox"
+    }, {
       path: "/ShuffleBurger",
       component: _644e8da2,
       name: "ShuffleBurger"
@@ -88,6 +104,10 @@ export function createRouter() {
       path: "/ShuffleText",
       component: _3bf3eb9a,
       name: "ShuffleText"
+    }, {
+      path: "/TeaMenu",
+      component: _56dc42e3,
+      name: "TeaMenu"
     }, {
       path: "/",
       component: _3fdee074,
