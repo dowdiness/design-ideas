@@ -2,11 +2,14 @@ import Vue from 'vue'
 import Router from 'vue-router'
 import { interopDefault } from './utils'
 
+const _6b0d3370 = () => interopDefault(import('../pages/Anime.vue' /* webpackChunkName: "pages/Anime" */))
 const _4c4b9256 = () => interopDefault(import('../pages/FloatingBubbles.vue' /* webpackChunkName: "pages/FloatingBubbles" */))
+const _7366b3d5 = () => interopDefault(import('../pages/PopCircle.vue' /* webpackChunkName: "pages/PopCircle" */))
 const _4a73ac4f = () => interopDefault(import('../pages/processing.vue' /* webpackChunkName: "pages/processing" */))
 const _83aa3152 = () => interopDefault(import('../pages/SearchBox.vue' /* webpackChunkName: "pages/SearchBox" */))
 const _644e8da2 = () => interopDefault(import('../pages/ShuffleBurger.vue' /* webpackChunkName: "pages/ShuffleBurger" */))
 const _3bf3eb9a = () => interopDefault(import('../pages/ShuffleText.vue' /* webpackChunkName: "pages/ShuffleText" */))
+const _7cdece7a = () => interopDefault(import('../pages/SlideAppear.vue' /* webpackChunkName: "pages/SlideAppear" */))
 const _56dc42e3 = () => interopDefault(import('../pages/TeaMenu.vue' /* webpackChunkName: "pages/TeaMenu" */))
 const _3fdee074 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -85,9 +88,17 @@ export function createRouter() {
     scrollBehavior,
 
     routes: [{
+      path: "/Anime",
+      component: _6b0d3370,
+      name: "Anime"
+    }, {
       path: "/FloatingBubbles",
       component: _4c4b9256,
       name: "FloatingBubbles"
+    }, {
+      path: "/PopCircle",
+      component: _7366b3d5,
+      name: "PopCircle"
     }, {
       path: "/processing",
       component: _4a73ac4f,
@@ -104,6 +115,10 @@ export function createRouter() {
       path: "/ShuffleText",
       component: _3bf3eb9a,
       name: "ShuffleText"
+    }, {
+      path: "/SlideAppear",
+      component: _7cdece7a,
+      name: "SlideAppear"
     }, {
       path: "/TeaMenu",
       component: _56dc42e3,

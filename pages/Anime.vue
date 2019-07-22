@@ -21,7 +21,6 @@ h1 {
 
 <script>
 import { resizeCanvas } from "~/utilities/canvas.js"
-import Color from "color"
 
 export default {
   mounted() {
@@ -29,7 +28,7 @@ export default {
     var ctx = c.getContext("2d");
     var cH;
     var cW;
-    var bgColor = "#fff";
+    var bgColor = "#feebc8";
     var animations = [];
     var circles = [];
     let lines = []
@@ -54,16 +53,14 @@ export default {
         let circle = {
           x: anime.random(0, cW),
           y: anime.random(0, cH),
-          r: anime.random(20, 30),
-          color: Color("#e2e8f0").alpha(0.9)
+          r: anime.random(20, 30)
         }
         circles.push(circle)
 
         let line = {
           x: anime.random(0, cW),
           y: anime.random(0, cH),
-          l: anime.random(30, 130),
-          color: Color("#edf2f7").alpha(0.4)
+          l: anime.random(30, 130)
         }
         lines.push(line)
       }
@@ -98,7 +95,7 @@ export default {
     function circleAnime () {
       ctx.fillStyle = bgColor;
       ctx.fillRect(0, 0, cW, cH);
-      ctx.fillStyle = Color("#f7f7f7").alpha(0.4).string();
+      ctx.fillStyle =  "#fffaf0";
       circles.map(circle => {
         if(circle.x < cW) {
           circle.x += 1
@@ -114,7 +111,7 @@ export default {
         ctx.arc(circle.x , circle.y, circle.r, 0, Math.PI*2, false);
         ctx.fill();
       })
-      ctx.strokeStyle = '#f7f7f7';
+      ctx.strokeStyle = '#edf2f7';
       lines.map(line => {
         if(line.x < cW) {
           line.x += 1
