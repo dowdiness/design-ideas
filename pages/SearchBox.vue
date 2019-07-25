@@ -1,9 +1,9 @@
 <template>
   <div class="w-screen h-screen bg-red montserrat">
-    <h1 class="top text-center uppercase text-5xl font-bold text-white">search box<hr class="mt-8 border-b border-white border-2 w-2/5"></h1>
+    <h1 class="w-full top text-center uppercase text-5xl font-bold text-white">search box<hr class="mt-8 border-b border-white border-2 w-2/5"></h1>
     <div class="search--box h-12 center bg-transparent bg-gray-800 rounded-full transition">
       <input class="search--box__text mt-3 float-left w-0 p-0 bg-transparent border-none outline-none leading-relaxed text-gray-300 transition" type="text" placeholder="Type to search">
-      <a class="search--box__link float-right m-auto w-12 h-12 flex justify-center items-center bg-gray-800 rounded-full text-red transition" href="/"><i class="fas fa-search"></i></a>
+      <nuxt-link class="search--box__link float-right m-auto w-12 h-12 flex justify-center items-center bg-gray-800 rounded-full text-red transition" to="/"><i class="fas fa-search"></i></nuxt-link>
     </div>
   </div>
 </template>

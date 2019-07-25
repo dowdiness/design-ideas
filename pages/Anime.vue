@@ -1,7 +1,5 @@
 <template>
-  <canvas id="c">
-    <h1>Hello!</h1>
-  </canvas>
+  <canvas id="c"></canvas>
 </template>
 
 <style>
@@ -10,18 +8,9 @@ canvas {
   width: 100vw;
   height: 100vh;
 }
-h1 {
-  z-index: 1000;
-  color: #eee;
-  font-size: 8rem;
-  width: 6rem;
-  height: 3rem;
-}
 </style>
 
 <script>
-import { resizeCanvas } from "~/utilities/canvas.js"
-
 export default {
   mounted() {
     var c = document.getElementById("c");

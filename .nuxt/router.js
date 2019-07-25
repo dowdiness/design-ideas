@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import { interopDefault } from './utils'
 
 const _6b0d3370 = () => interopDefault(import('../pages/Anime.vue' /* webpackChunkName: "pages/Anime" */))
+const _105e70c1 = () => interopDefault(import('../pages/CssArrows.vue' /* webpackChunkName: "pages/CssArrows" */))
 const _4c4b9256 = () => interopDefault(import('../pages/FloatingBubbles.vue' /* webpackChunkName: "pages/FloatingBubbles" */))
 const _7366b3d5 = () => interopDefault(import('../pages/PopCircle.vue' /* webpackChunkName: "pages/PopCircle" */))
 const _4a73ac4f = () => interopDefault(import('../pages/processing.vue' /* webpackChunkName: "pages/processing" */))
@@ -10,6 +11,7 @@ const _83aa3152 = () => interopDefault(import('../pages/SearchBox.vue' /* webpac
 const _644e8da2 = () => interopDefault(import('../pages/ShuffleBurger.vue' /* webpackChunkName: "pages/ShuffleBurger" */))
 const _3bf3eb9a = () => interopDefault(import('../pages/ShuffleText.vue' /* webpackChunkName: "pages/ShuffleText" */))
 const _7cdece7a = () => interopDefault(import('../pages/SlideAppear.vue' /* webpackChunkName: "pages/SlideAppear" */))
+const _601236b6 = () => interopDefault(import('../pages/SpaceMarket.vue' /* webpackChunkName: "pages/SpaceMarket" */))
 const _56dc42e3 = () => interopDefault(import('../pages/TeaMenu.vue' /* webpackChunkName: "pages/TeaMenu" */))
 const _3fdee074 = () => interopDefault(import('../pages/index.vue' /* webpackChunkName: "pages/index" */))
 
@@ -92,6 +94,10 @@ export function createRouter() {
       component: _6b0d3370,
       name: "Anime"
     }, {
+      path: "/CssArrows",
+      component: _105e70c1,
+      name: "CssArrows"
+    }, {
       path: "/FloatingBubbles",
       component: _4c4b9256,
       name: "FloatingBubbles"
@@ -119,6 +125,10 @@ export function createRouter() {
       path: "/SlideAppear",
       component: _7cdece7a,
       name: "SlideAppear"
+    }, {
+      path: "/SpaceMarket",
+      component: _601236b6,
+      name: "SpaceMarket"
     }, {
       path: "/TeaMenu",
       component: _56dc42e3,

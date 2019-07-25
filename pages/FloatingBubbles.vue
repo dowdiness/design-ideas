@@ -21,7 +21,9 @@ h1 {
 
 <script>
 import { resizeCanvas } from "~/utilities/canvas.js"
+import { map } from "~/utilities/math.js"
 import Color from "color"
+import SimplexNoise from "simplex-noise"
 
 export default {
   mounted() {
@@ -50,12 +52,14 @@ export default {
 
     (function init() {
       resizeCanvas();
+      var simplex = new SimplexNoise()
       for(var i = 0; i < 25; i++) {
         let circle = {
           x: anime.random(0, cW),
           y: anime.random(0, cH),
           r: anime.random(20, 30),
-          color: Color("#e2e8f0").alpha(0.9)
+          color: Color("#e2e8f0"),
+          seed: Math.random()
         }
         circles.push(circle)
 
@@ -63,7 +67,8 @@ export default {
           x: anime.random(0, cW),
           y: anime.random(0, cH),
           l: anime.random(30, 130),
-          color: Color("#edf2f7").alpha(0.4)
+          color: Color("#edf2f7"),
+          seed: Math.random()
         }
         lines.push(line)
       }
@@ -98,8 +103,7 @@ export default {
     function circleAnime () {
       ctx.fillStyle = bgColor;
       ctx.fillRect(0, 0, cW, cH);
-      ctx.fillStyle = Color("#f7f7f7").alpha(0.4).string();
-      circles.map(circle => {
+      circles.map((circle, i) => {
         if(circle.x < cW) {
           circle.x += 1
         } else {
@@ -110,6 +114,15 @@ export default {
         } else {
           circle.y = cH
         }
+        if (circle.seed < 1 && circle.seed > 0.1) {
+          circle.seed += map(anime.random(0, 1000), 0, 1000, -0.05, 0.05)
+        } else if (circle.seed > 1) {
+          circle.seed -= map(anime.random(0, 1000), 0, 1000, 0, 0.05)
+        } else if (circle.seed < 0.1) {
+          circle.seed += map(anime.random(0, 1000), 0, 1000, 0, 0.05)
+        }
+        ctx.globalAlpha = circle.seed
+        ctx.fillStyle = circle.color.string();
         ctx.beginPath();
         ctx.arc(circle.x , circle.y, circle.r, 0, Math.PI*2, false);
         ctx.fill();
@@ -133,9 +146,8 @@ export default {
         ctx.stroke();
 
       })
+      requestAnimationFrame(circleAnime)
     }
-    setInterval(circleAnime, 1000 / 40)
-
     requestAnimationFrame(circleAnime)
   },
   head(){

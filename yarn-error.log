@@ -1,0 +1,61 @@
+Arguments: 
+  /Users/Koji/.nodenv/versions/10.15.3/bin/node /usr/local/Cellar/yarn/1.15.2/libexec/bin/yarn.js add simplex-noise.js
+
+PATH: 
+  /Users/Koji/.nodenv/versions/10.15.3/bin:/usr/local/Cellar/nodenv/1.2.0/libexec:/Users/Koji/.nodenv/shims:/Users/Koji/.anyenv/bin:/Users/Koji/development/mongodb/bin:/Users/Koji/.local/bin:/Users/Koji/.composer/vendor/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/anaconda3/bin:/anaconda3/condabin:/Users/Koji/development/google-cloud-sdk/bin:/Users/Koji/.nodenv/shims:/Users/Koji/.anyenv/bin:/Users/Koji/development/mongodb/bin:/Users/Koji/.local/bin:/Users/Koji/.composer/vendor/bin
+
+Yarn version: 
+  1.15.2
+
+Node version: 
+  10.15.3
+
+Platform: 
+  darwin x64
+
+Trace: 
+  Error: https://registry.yarnpkg.com/simplex-noise.js: Not found
+      at Request.params.callback [as _callback] (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:66058:18)
+      at Request.self.callback (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:129541:22)
+      at Request.emit (events.js:189:13)
+      at Request.<anonymous> (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:130513:10)
+      at Request.emit (events.js:189:13)
+      at IncomingMessage.<anonymous> (/usr/local/Cellar/yarn/1.15.2/libexec/lib/cli.js:130435:12)
+      at Object.onceWrapper (events.js:277:13)
+      at IncomingMessage.emit (events.js:194:15)
+      at endReadableNT (_stream_readable.js:1125:12)
+      at process._tickCallback (internal/process/next_tick.js:63:19)
+
+npm manifest: 
+  {
+    "name": "ideas",
+    "version": "1.0.0",
+    "description": "Experimental design ideas",
+    "dependencies": {
+      "color": "^3.1.2",
+      "nuxt": "^2.8.1",
+      "p5": "^0.9.0",
+      "shuffle-text": "^0.2.8"
+    },
+    "devDependencies": {},
+    "scripts": {
+      "dev": "nuxt",
+      "generate": "nuxt generate"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/dowdiness/design-ideas.git"
+    },
+    "author": "koji ishimoto",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/dowdiness/design-ideas/issues"
+    },
+    "homepage": "https://github.com/dowdiness/design-ideas#readme"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

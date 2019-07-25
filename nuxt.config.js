@@ -1,3 +1,6 @@
 export default {
-  css: ['~/assets/main.css']
+  css: ['~/assets/main.css'],
+  devModules: [
+    '@nuxtjs/tailwindcss'
+  ]
 }
